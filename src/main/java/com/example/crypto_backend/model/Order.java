@@ -6,20 +6,21 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-import java.util.List;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Document
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Order {
     @Id
-    private Integer id;
-    private String username;
-    private String password;
-    private String name;
-    private List<String> list;
-    private List<Asset> wallet;
-    private List<Order> orders;
+    private Integer orderId;
+    private Integer userId;
+    private String type;
+    private String status;
+    private String coinId;
+    private Double amount;
+    private Double value;
+
 }
